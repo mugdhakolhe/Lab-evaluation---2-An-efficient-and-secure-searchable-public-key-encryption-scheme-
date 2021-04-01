@@ -77,8 +77,8 @@ void setup(mpz_t security_parameter)
 	pbc_param_init_a1_gen(par, q);		// Setting parameter "n",of a1 type elliptic curve 
 	
 	pairing_init_pbc_param(pairing, par);	//Initialize a pairing with pairing parameters par
-	//printf("\nParameters are (p + 1 = n * l where p is prime, same as the q in a_param, n is the order of the group): \n");
-	//pbc_param_out_str(stdout, par);			// Printing all parameters
+	printf("\nParameters are (p + 1 = n * l where p is prime, same as the q in a_param, n is the order of the group): \n");
+	pbc_param_out_str(stdout, par);			// Printing all parameters
 	element_t g1, g2, gt, temp;
 	element_init_G1(g1, pairing);			//Initialize g1 to be an element of the group G1(input group)
 	element_init_G1(g2, pairing);			//Initialize g2 to be an element of the group G1(input group)
